@@ -5,7 +5,13 @@
 #include <QCameraImageCapture>
 #include <QPair>
 
-class ResolutionModel : public QAbstractListModel
+#if defined PIGGZOVISION
+ #define PIGGZOVISION_COMMON_DLLSPEC Q_DECL_EXPORT
+#else
+ #define PIGGZOVISION_COMMON_DLLSPEC Q_DECL_IMPORT
+#endif
+
+class PIGGZOVISION_COMMON_DLLSPEC ResolutionModel : public QAbstractListModel
 {
     Q_OBJECT
 

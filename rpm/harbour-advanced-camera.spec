@@ -6,6 +6,8 @@
 Name:       harbour-advanced-camera
 
 # >> macros
+%define __provides_exclude_from ^%{_datadir}/.*$
+%define __requires_exclude ^libpiggzovision.*$
 # << macros
 
 %{!?qtc_qmake:%define qtc_qmake %qmake}
@@ -66,6 +68,7 @@ desktop-file-install --delete-original       \
 %defattr(-,root,root,-)
 %{_bindir}
 %{_datadir}/%{name}
+%{_datadir}/%{name}/lib
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 # >> files

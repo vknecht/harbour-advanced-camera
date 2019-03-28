@@ -1,30 +1,6 @@
-# NOTICE:
-#
-# Application name defined in TARGET has a corresponding QML filename.
-# If name defined in TARGET is changed, the following needs to be done
-# to match new name:
-#   - corresponding QML filename must be changed
-#   - desktop icon filename must be changed
-#   - desktop filename must be changed
-#   - icon definition filename in desktop file must be changed
-#   - translation filenames have to be changed
-
-# The name of your application
-TARGET = harbour-advanced-camera
-
-CONFIG += sailfishapp
-
-QT += multimedia
-
-SOURCES += src/harbour-advanced-camera.cpp \
-    src/effectsmodel.cpp \
-    src/exposuremodel.cpp \
-    src/isomodel.cpp \
-    src/resolutionmodel.cpp \
-    src/wbmodel.cpp \
-    src/focusmodel.cpp \
-    src/flashmodel.cpp \
-    src/fsoperations.cpp
+TEMPLATE = subdirs
+SUBDIRS = src/piggzovision/piggzovision.pro src/src.pro
+CONFIG += ordered
 
 DISTFILES += rpm/harbour-advanced-camera.changes.in \
     rpm/harbour-advanced-camera.changes.run.in \
@@ -57,12 +33,3 @@ TRANSLATIONS += translations/harbour-advanced-camera-de.ts \
                 translations/harbour-advanced-camera-fr.ts \
                 translations/harbour-advanced-camera-sv.ts
 
-HEADERS += \
-    src/effectsmodel.h \
-    src/exposuremodel.h \
-    src/isomodel.h \
-    src/resolutionmodel.h \
-    src/wbmodel.h \
-    src/focusmodel.h \
-    src/flashmodel.h \
-    src/fsoperations.h

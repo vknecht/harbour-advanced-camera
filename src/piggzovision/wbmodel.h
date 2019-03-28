@@ -5,7 +5,13 @@
 #include <QCamera>
 #include <QPair>
 
-class WbModel : public QAbstractListModel
+#if defined PIGGZOVISION
+ #define PIGGZOVISION_COMMON_DLLSPEC Q_DECL_EXPORT
+#else
+ #define PIGGZOVISION_COMMON_DLLSPEC Q_DECL_IMPORT
+#endif
+
+class PIGGZOVISION_COMMON_DLLSPEC WbModel : public QAbstractListModel
 {
     Q_OBJECT
 

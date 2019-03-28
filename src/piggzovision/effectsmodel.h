@@ -5,7 +5,13 @@
 #include <QCamera>
 #include <QPair>
 
-class EffectsModel : public QAbstractListModel
+#if defined PIGGZOVISION
+ #define PIGGZOVISION_COMMON_DLLSPEC Q_DECL_EXPORT
+#else
+ #define PIGGZOVISION_COMMON_DLLSPEC Q_DECL_IMPORT
+#endif
+
+class PIGGZOVISION_COMMON_DLLSPEC EffectsModel : public QAbstractListModel
 {
     Q_OBJECT
 public:

@@ -8,13 +8,7 @@
 #include <QSortFilterProxyModel>
 
 #include <sailfishapp.h>
-#include "effectsmodel.h"
-#include "exposuremodel.h"
-#include "isomodel.h"
-#include "resolutionmodel.h"
-#include "wbmodel.h"
-#include "focusmodel.h"
-#include "flashmodel.h"
+#include "piggzovision.h"
 #include "fsoperations.h"
 
 int main(int argc, char *argv[])
